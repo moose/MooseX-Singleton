@@ -4,8 +4,8 @@ use warnings;
 use Test::More;
 
 use Test::Requires {
-   'MooseX::StrictConstructor' => 0.01, # skip all if not installed
-   'Test::Fatal' => 0.001,
+    'MooseX::StrictConstructor' => 0.09,
+    'Test::Fatal' => 0.001,
 };
 
 {
