@@ -1,5 +1,9 @@
 Revision history for Perl extension MooseX-Singleton
 
+{{NEXT}}
+    - The test suite now uses Test::Fatal instead of Test::Exception (Karen
+      Etheridge).
+
 0.25 2010-08-22
     - Fixes for latest Moose. (Dave Rolsky)
 

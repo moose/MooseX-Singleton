@@ -9,7 +9,7 @@ requires 'Moose' => '1.10';
 
 build_requires 'Scalar::Util';
 build_requires 'Test::More' => '0.88';
-build_requires 'Test::Exception';
+build_requires 'Test::Fatal';
 build_requires 'Test::Requires';
 
 license 'Perl';

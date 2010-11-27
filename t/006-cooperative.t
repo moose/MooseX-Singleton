@@ -5,7 +5,7 @@ use Test::More;
 
 use Test::Requires {
    'MooseX::StrictConstructor' => 0.01, # skip all if not installed
-   'Test::Exception' => 0.01,
+   'Test::Fatal' => 0.001,
 };
 
 {
@@ -17,9 +17,9 @@ use Test::Requires {
     has 'attrib' => ( is => 'rw' );
 }
 
-throws_ok {
+like( exception {
     MySingleton->new( bad_name => 42 );
-}
-qr/Found unknown attribute/, 'singleton class also has a strict constructor';
+},
+qr/Found unknown attribute/, 'singleton class also has a strict constructor');
 
 done_testing;

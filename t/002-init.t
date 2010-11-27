@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 use Test::More;
-use Test::Exception;
+use Test::Fatal;
 
 my $i = 0;
 sub new_singleton_pkg {
@@ -16,13 +16,13 @@ sub new_singleton_pkg {
   return $pkg_name;
 }
 
-throws_ok { new_singleton_pkg()->instance }
+like( exception { new_singleton_pkg()->instance },
     qr/\QAttribute (number) is required/,
-    q{can't get the Singleton if requires attrs and we don't provide them};
+    q{can't get the Singleton if requires attrs and we don't provide them});
 
-throws_ok { new_singleton_pkg()->string }
+like( exception { new_singleton_pkg()->string },
     qr/\QAttribute (number) is required/,
-    q{can't call any Singleton attr reader if Singleton can't be inited};
+    q{can't call any Singleton attr reader if Singleton can't be inited});
 
 for my $pkg (new_singleton_pkg) {
     my $mst = $pkg->new( number => 5 );
@@ -36,9 +36,9 @@ for my $pkg (new_singleton_pkg) {
         "the class method, called directly, returns the given attribute value"
     );
 
-    throws_ok { $pkg->new( number => 3 ) }
+    like( exception { $pkg->new( number => 3 ) },
         qr/already/,
-        "can't make new singleton with conflicting attributes";
+        "can't make new singleton with conflicting attributes");
 
     my $second = eval { $pkg->new };
     ok( !$@, "...but a second ->new without args is okay" );
@@ -46,9 +46,9 @@ for my $pkg (new_singleton_pkg) {
     is( $second->number, 5,
         "...we get the originally inited number from it" );
 
-    throws_ok { $pkg->initialize }
+    like( exception { $pkg->initialize },
         qr/already/,
-        "...but ->initialize() is still an error";
+        "...but ->initialize() is still an error");
 }
 
 {
