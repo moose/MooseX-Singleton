@@ -6,11 +6,11 @@ name 'MooseX-Singleton';
 all_from 'lib/MooseX/Singleton.pm';
 
 requires 'Moose' => '1.10';
+requires 'Scalar::Util';
 
-build_requires 'Scalar::Util';
-build_requires 'Test::More' => '0.88';
-build_requires 'Test::Fatal';
-build_requires 'Test::Requires';
+test_requires 'Test::More' => '0.88';
+test_requires 'Test::Fatal';
+test_requires 'Test::Requires';
 
 license 'Perl';
 
