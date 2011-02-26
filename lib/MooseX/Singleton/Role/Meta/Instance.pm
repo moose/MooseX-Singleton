@@ -2,8 +2,6 @@ package MooseX::Singleton::Role::Meta::Instance;
 use Moose::Role;
 use Scalar::Util 'weaken';
 
-our $VERSION = '0.25';
-$VERSION = eval $VERSION;
 
 sub get_singleton_instance {
     my ( $self, $instance ) = @_;
@@ -63,13 +61,11 @@ no Moose::Role;
 
 1;
 
+# ABSTRACT: Instance metaclass role for MooseX::Singleton
+
 __END__
 
 =pod
-
-=head1 NAME
-
-MooseX::Singleton::Role::Meta::Instance - Instance metaclass role for MooseX::Singleton
 
 =head1 DESCRIPTION
 

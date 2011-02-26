@@ -3,8 +3,6 @@ use Moose::Role;
 use MooseX::Singleton::Role::Meta::Instance;
 use MooseX::Singleton::Role::Meta::Method::Constructor;
 
-our $VERSION = '0.25';
-$VERSION = eval $VERSION;
 
 sub existing_singleton {
     my ($class) = @_;
@@ -64,13 +62,11 @@ no Moose::Role;
 
 1;
 
+# ABSTRACT: Metaclass role for MooseX::Singleton
+
 __END__
 
 =pod
-
-=head1 NAME
-
-MooseX::Singleton::Role::Meta::Class - Metaclass role for MooseX::Singleton
 
 =head1 DESCRIPTION
 

@@ -2,8 +2,6 @@ package MooseX::Singleton::Role::Object;
 use Moose::Role;
 use Carp qw( carp );
 
-our $VERSION = '0.25';
-$VERSION = eval $VERSION;
 
 sub instance { shift->new }
 
@@ -38,13 +36,11 @@ no Moose::Role;
 
 1;
 
+# ABSTRACT: Object class role for MooseX::Singleton
+
 __END__
 
 =pod
-
-=head1 NAME
-
-MooseX::Singleton::Role::Object - Object class role for MooseX::Singleton
 
 =head1 DESCRIPTION
 

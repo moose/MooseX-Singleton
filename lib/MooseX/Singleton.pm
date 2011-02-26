@@ -6,8 +6,6 @@ use MooseX::Singleton::Role::Object;
 use MooseX::Singleton::Role::Meta::Class;
 use MooseX::Singleton::Role::Meta::Instance;
 
-our $VERSION = '0.25';
-$VERSION = eval $VERSION;
 
 Moose::Exporter->setup_import_methods( also => 'Moose' );
 
@@ -42,13 +40,11 @@ sub init_meta {
 
 1;
 
+# ABSTRACT: turn your Moose class into a singleton
+
 __END__
 
 =pod
-
-=head1 NAME
-
-MooseX::Singleton - turn your Moose class into a singleton
 
 =head1 SYNOPSIS
 
@@ -112,12 +108,6 @@ C<bug-moosex-singleton@rt.cpan.org>, or through the web interface at
 L<http://rt.cpan.org>. We will be notified, and then you'll automatically be
 notified of progress on your bug as we make changes.
 
-=head1 AUTHORS
-
-Shawn M Moore E<lt>sartak@gmail.comE<gt>
-
-Dave Rolsky E<lt>autarch@urth.orgE<gt>
-
 =head1 SOME CODE STOLEN FROM
 
 Anders Nor Berle E<lt>debolaz@gmail.comE<gt>
@@ -125,13 +115,6 @@ Anders Nor Berle E<lt>debolaz@gmail.comE<gt>
 =head1 AND PATCHES FROM
 
 Ricardo SIGNES E<lt>rjbs@cpan.orgE<gt>
-
-=head1 COPYRIGHT AND LICENSE
-
-Copyright 2007-2009 Infinity Interactive
-
-This program is free software; you can redistribute it and/or modify it under
-the same terms as Perl itself.
 
 =cut
 

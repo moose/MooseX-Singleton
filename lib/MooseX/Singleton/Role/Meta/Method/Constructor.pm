@@ -1,8 +1,6 @@
 package MooseX::Singleton::Role::Meta::Method::Constructor;
 use Moose::Role;
 
-our $VERSION = '0.25';
-$VERSION = eval $VERSION;
 
 if ( $Moose::VERSION < 1.9900 ) {
     override _initialize_body => sub {
@@ -98,13 +96,11 @@ no Moose::Role;
 
 1;
 
+# ABSTRACT: Constructor method role for MooseX::Singleton
+
 __END__
 
 =pod
-
-=head1 NAME
-
-MooseX::Singleton::Role::Meta::Method::Constructor - Constructor method role for MooseX::Singleton
 
 =head1 DESCRIPTION
 
