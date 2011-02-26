@@ -39,6 +39,27 @@ override _construct_instance => sub {
     return ${"$pkg\::singleton"} = super;
 };
 
+if ( $Moose::VERSION >= 1.9900 ) {
+    override _inline_params => sub {
+        my $self = shift;
+
+        return
+            'my $existing = do {',
+                'no strict "refs";',
+                'no warnings "once";',
+                '\${"$class\::singleton"};',
+            '};',
+            'return ${$existing} if ${$existing};',
+            super();
+    };
+
+    override _inline_extra_init => sub {
+        my $self = shift;
+
+        return '${$existing} = $instance;';
+    };
+}
+
 no Moose::Role;
 
 1;
