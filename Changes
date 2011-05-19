@@ -1,6 +1,6 @@
 Revision history for Perl extension MooseX-Singleton
 
-{{$NEXT}
+{{$NEXT}}
 
     - Fix 006-cooperative.t - this test requires MooseX::StrictConstructor
       0.16+ to pass with Moose 2.00+. Reported by Alexandr Ciornii. RT
