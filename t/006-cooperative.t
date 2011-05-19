@@ -4,7 +4,7 @@ use warnings;
 use Test::More;
 
 use Test::Requires {
-    'MooseX::StrictConstructor' => 0.09,
+    'MooseX::StrictConstructor' => 0.16,
     'Test::Fatal' => 0.001,
 };
 
