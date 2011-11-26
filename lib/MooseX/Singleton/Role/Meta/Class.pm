@@ -34,6 +34,7 @@ override _construct_instance => sub {
 
     my $pkg = $class->name;
     no strict 'refs';
+    no warnings 'once';
     return ${"$pkg\::singleton"} = super;
 };
 

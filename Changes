@@ -1,6 +1,8 @@
 Revision history for Perl extension MooseX-Singleton
 
 {{$NEXT}}
+    - Fix RT Bug #46086, "name used only once" (Thanks chisel for the patch and
+      the test
 
 0.27 2011-05-19
 
