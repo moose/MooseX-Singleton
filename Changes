@@ -5,7 +5,6 @@ Revision history for Perl extension MooseX-Singleton
       the test)
 
 0.27 2011-05-19
-
     - Fix 006-cooperative.t - this test requires MooseX::StrictConstructor
       0.16+ to pass with Moose 2.00+. Reported by Alexandr Ciornii. RT
       #67965. (Dave Rolsky)
