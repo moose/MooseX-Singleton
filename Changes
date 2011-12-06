@@ -1,6 +1,9 @@
 Revision history for Perl extension MooseX-Singleton
 
 {{$NEXT}}
+    - Fix warnings_once.t to not die if Test::NoWarnings isn't installed (Kaare)
+
+0.28 2011-12-05
     - Fix RT Bug #46086, "name used only once" (Thanks chisel for the patch and
       the test)
 
