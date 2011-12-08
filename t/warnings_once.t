@@ -4,7 +4,7 @@ use warnings;
 
 use Test::More qw(no_plan);
 use Test::Requires {
-	'Test::NoWarnings' => 0.01
+    'Test::NoWarnings' => 0.01
 };
 
 BEGIN {
