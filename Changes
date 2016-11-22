@@ -1,6 +1,8 @@
 Revision history for Perl extension MooseX-Singleton
 
 {{$NEXT}}
+
+0.29 2011-12-08
     - Fix warnings_once.t to not die if Test::NoWarnings isn't installed (Kaare)
 
 0.28 2011-12-05
