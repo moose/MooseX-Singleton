@@ -1,6 +1,7 @@
 Revision history for Perl extension MooseX-Singleton
 
 {{$NEXT}}
+    - move repository to github Moose organization
 
 0.29 2011-12-08
     - Fix warnings_once.t to not die if Test::NoWarnings isn't installed (Kaare)
