@@ -2,10 +2,10 @@ use strict;
 use warnings;
 
 use Test::More 0.88;
+use Test::Fatal;
 
 use Test::Requires {
     'MooseX::StrictConstructor' => 0.16,
-    'Test::Fatal' => 0.001,
 };
 
 {
