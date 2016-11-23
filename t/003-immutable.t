@@ -2,7 +2,7 @@ use strict;
 use warnings;
 
 use Scalar::Util qw( refaddr );
-use Test::More;
+use Test::More 0.88;
 
 use Test::Requires {
    'Test::Warn' => 0.01, # skip all if not installed
