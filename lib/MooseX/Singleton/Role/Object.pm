@@ -45,6 +45,8 @@ __END__
 
 =head1 DESCRIPTION
 
+=for Pod::Coverage *EVERYTHING*
+
 This just adds C<instance> as a shortcut for C<new>.
 
 =cut

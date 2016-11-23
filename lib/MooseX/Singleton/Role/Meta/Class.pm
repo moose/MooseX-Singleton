@@ -70,6 +70,8 @@ __END__
 
 =pod
 
+=for Pod::Coverage *EVERYTHING*
+
 =head1 DESCRIPTION
 
 This metaclass role makes sure that there is only ever one instance of an

@@ -70,6 +70,8 @@ __END__
 
 =head1 DESCRIPTION
 
+=for Pod::Coverage *EVERYTHING*
+
 This role overrides all object access so that it gets the appropriate
 singleton instance for the class.
 
