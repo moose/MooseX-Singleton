@@ -6,7 +6,7 @@ use MooseX::Singleton::Role::Object;
 use MooseX::Singleton::Role::Meta::Class;
 use MooseX::Singleton::Role::Meta::Instance;
 
-our $VERSION = '0.30';
+our $VERSION = '0.31';
 
 Moose::Exporter->setup_import_methods( also => 'Moose' );
 

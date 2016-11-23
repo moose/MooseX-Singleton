@@ -2,7 +2,7 @@ package MooseX::Singleton::Role::Object;
 use Moose::Role;
 use Carp qw( confess );
 
-our $VERSION = '0.30';
+our $VERSION = '0.31';
 
 sub instance { shift->new }
 
