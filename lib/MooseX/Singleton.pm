@@ -41,7 +41,7 @@ sub init_meta {
 
 1;
 
-# ABSTRACT: turn your Moose class into a singleton
+# ABSTRACT: Turn your Moose class into a singleton
 
 __END__
 
