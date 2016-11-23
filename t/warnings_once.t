@@ -2,10 +2,8 @@
 use strict;
 use warnings;
 
-use Test::More qw(no_plan);
-use Test::Requires {
-    'Test::NoWarnings' => 0.01
-};
+use Test::More 0.88;
+use Test::Warnings; # adds a no-warnings test before done_testing
 
 BEGIN {
     package OnlyUsedOnce;
@@ -17,3 +15,5 @@ BEGIN {
 BEGIN { OnlyUsedOnce->initialize; }
 
 my $s = OnlyUsedOnce->instance;
+
+done_testing;

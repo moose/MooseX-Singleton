@@ -4,9 +4,7 @@ use warnings;
 use Scalar::Util qw( refaddr );
 use Test::More 0.88;
 
-use Test::Requires {
-   'Test::Warn' => 0.01, # skip all if not installed
-};
+use Test::Warnings ':all', ':no_end_test';
 
 
 {
@@ -37,8 +35,8 @@ use Test::Requires {
         $self->bag->{$key} += $value;
     }
 
-    ::warning_is sub { __PACKAGE__->meta->make_immutable }, '',
-        'no warnings when calling make_immutable';
+    ::is_deeply([ ::warnings { __PACKAGE__->meta->make_immutable } ], [],
+        'no warnings when calling make_immutable');
 }
 
 my $mst = MooseX::Singleton::Test->instance;
