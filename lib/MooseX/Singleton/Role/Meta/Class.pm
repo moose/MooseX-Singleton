@@ -3,6 +3,7 @@ use Moose::Role;
 use MooseX::Singleton::Role::Meta::Instance;
 use MooseX::Singleton::Role::Meta::Method::Constructor;
 
+our $VERSION = '0.30';
 
 sub existing_singleton {
     my ($class) = @_;

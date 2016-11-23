@@ -22,3 +22,4 @@ __DATA__
 metaclass
 Rolsky
 SIGNES
+irc
