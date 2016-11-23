@@ -1,6 +1,6 @@
 package MooseX::Singleton::Role::Meta::Instance;
 use Moose::Role;
-use Scalar::Util 'weaken';
+use Scalar::Util qw(weaken blessed);
 
 our $VERSION = '0.30';
 
