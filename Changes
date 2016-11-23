@@ -1,6 +1,6 @@
 Revision history for Perl extension MooseX-Singleton
 
-{{$NEXT}}
+0.30      2016-11-23 04:46:06Z
     - move repository to github Moose organization
     - properly declare test prereqs
 
