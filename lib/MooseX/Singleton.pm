@@ -112,6 +112,8 @@ Anders Nor Berle E<lt>debolaz@gmail.comE<gt>
 
 =head1 AND PATCHES FROM
 
+=for stopwords SIGNES
+
 Ricardo SIGNES E<lt>rjbs@cpan.orgE<gt>
 
 =cut
